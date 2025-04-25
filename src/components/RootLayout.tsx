@@ -90,7 +90,7 @@ function Header({
 					</div>
 				</Link>
 				<div className="flex items-center gap-x-8">
-					<Button href="/contact" invert={invert}>
+					<Button href="/" invert={invert}>
 						Contact us
 					</Button>
 					{/* <button
