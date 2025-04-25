@@ -110,10 +110,10 @@ function NewsletterForm() {
 	return (
 		<form className="max-w-sm">
 			<h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-				Let's Talk!
+				Let&lsquo;s Talk!
 			</h2>
 			<p className="mt-4 text-sm text-neutral-700">
-				Leave your number, and we'll ring you back shortly!
+				Leave your number, and we&lsquo;ll ring you back shortly!
 			</p>
 			<div className="relative mt-6">
 				<input
