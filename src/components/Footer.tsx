@@ -53,8 +53,7 @@ function Navigation() {
 								href="mailto:charchaa.in@gmail.com"
 								className="transition hover:text-neutral-950 flex items-center gap-x-2"
 							>
-								<Mail size={30} />
-								charchaa.in@gmail.com
+								✉️ charchaa.in@gmail.com
 							</Link>
 						</li>
 						<li className="mt-4">
@@ -62,7 +61,7 @@ function Navigation() {
 								href="tel:+917500860576"
 								className="transition hover:text-neutral-950 flex items-center gap-x-2"
 							>
-								<Phone size={30} /> 75008 60576
+								📞 75008 60576
 							</Link>
 						</li>
 						<li className="mt-4">
@@ -70,7 +69,7 @@ function Navigation() {
 								href="tel:+916398001680"
 								className="transition hover:text-neutral-950 flex items-center gap-x-2"
 							>
-								<Phone size={30} /> 63980 01680
+								📞 63980 01680
 							</Link>
 						</li>
 					</ul>
