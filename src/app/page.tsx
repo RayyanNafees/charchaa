@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 
 import { ContactSection } from "@/components/ContactSection";
@@ -19,19 +19,22 @@ import logoPhobiaDark from "@/images/clients/phobia/logo-dark.svg";
 import logoPhobiaLight from "@/images/clients/phobia/logo-light.svg";
 import logoUnseal from "@/images/clients/unseal/logo-light.svg";
 import imageLaptop from "@/images/laptop.jpg";
+
+import logoKnightRiders from "@/images/logos/knight-riders.png";
+import logoTaoBaoPizza from "@/images/logos/taobao-pizza.png";
+import logoTaoBao from "@/images/logos/taobao.png";
+import logoItmsh from "@/images/logos/itmsh.png";
+import logoTransform from "@/images/logos/transform-gym.png";
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from "@/lib/mdx";
 import Pricing from "@/components/Pricing";
 
 const clients = [
-	["Phobia", logoPhobiaLight],
-	["Family Fund", logoFamilyFund],
-	["Unseal", logoUnseal],
-	["Mail Smirk", logoMailSmirk],
-	["Home Work", logoHomeWork],
-	["Green Life", logoGreenLife],
-	["Bright Path", logoBrightPath],
-	["North Adventures", logoNorthAdventures],
-];
+	["TaoBao", logoTaoBao],
+	["TaoBao Pizza", logoTaoBaoPizza],
+	["Cafe Knight Riders", logoKnightRiders],
+	["ITMSH", logoItmsh],
+	["Transform Gym", logoTransform],
+] as Array<[string, StaticImageData]>;
 
 function Clients() {
 	return (
@@ -199,7 +202,7 @@ export default async function Home() {
 				</FadeIn>
 			</Container>
 
-			<Clients />
+			{/* <Clients /> */}
 
 			{/* <CaseStudies caseStudies={caseStudies} /> */}
 
