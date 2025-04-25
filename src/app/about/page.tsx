@@ -43,7 +43,7 @@ function Culture() {
             are allowed to have LinkedIn profiles.
           </GridListItem>
           <GridListItem title="Trust" invert>
-            We don't care when our team works just as long as they are working
+            We don&lsquo;t care when our team works just as long as they are working
             every waking second.
           </GridListItem>
           <GridListItem title="Compassion" invert>
@@ -202,7 +202,7 @@ export default async function About() {
             differently by charging triple instead.
           </p>
           <p>
-            At Charchaa, we're more than just colleagues — we're a family. This
+            At Charchaa, we&lsquo;re more than just colleagues — we&lsquo;re a family. This
             means we pay very little and expect people to work late. We want our
             employees to bring their whole selves to work. In return, we just
             ask that they keep themselves there until at least 6:30pm.
