@@ -210,9 +210,10 @@ export default async function Home() {
 				className="mt-24 sm:mt-32 lg:mt-40"
 				client={{ name: "Phobia", logo: logoPhobiaDark }}
 			>
-				The team at Charchaa went above and beyond with our onboarding, even
-				finding a way to access the user&lsquo;s microphone without triggering
-				one of those annoying permission dialogs.
+				Charcha really knows how to create engaging content! They helped us
+				dramatically improve our social media presence and reach way more
+				potential customers than we could on our own. Definitely recommend their
+				services
 			</Testimonial>
 
 			<Services />
