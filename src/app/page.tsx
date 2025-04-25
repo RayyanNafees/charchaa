@@ -20,6 +20,7 @@ import logoPhobiaLight from "@/images/clients/phobia/logo-light.svg";
 import logoUnseal from "@/images/clients/unseal/logo-light.svg";
 import imageLaptop from "@/images/laptop.jpg";
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from "@/lib/mdx";
+import Pricing from "@/components/Pricing";
 
 const clients = [
 	["Phobia", logoPhobiaLight],
@@ -38,14 +39,12 @@ function Clients() {
 			<Container>
 				<FadeIn className="flex items-center gap-x-8">
 					<h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-						We’ve worked with hundreds of amazing people
+						We&lsquo;ve worked with hundreds of amazing people
 					</h2>
 					<div className="h-px flex-auto bg-neutral-800" />
 				</FadeIn>
 				<FadeInStagger faster>
-					<ul
-						className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
-					>
+					<ul className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4">
 						{clients.map(([client, logo]) => (
 							<li key={client}>
 								<FadeIn>
@@ -72,9 +71,9 @@ function CaseStudies({
 				className="mt-24 sm:mt-32 lg:mt-40"
 			>
 				<p>
-					We believe technology is the answer to the world’s greatest
-					challenges. It’s also the cause, so we find ourselves in bit of a
-					catch 22 situation.
+					We believe technology is the answer to the world&lsquo;s greatest
+					challenges. It&lsquo;s also the cause, so we find ourselves in bit of
+					a catch 22 situation.
 				</p>
 			</SectionIntro>
 			<Container className="mt-16">
@@ -125,12 +124,12 @@ function Services() {
 		<>
 			<SectionIntro
 				eyebrow="Services"
-				title="We help you identify, explore and respond to new opportunities."
+				title="Elevate Your Social Presence with Our Expertise"
 				className="mt-24 sm:mt-32 lg:mt-40"
 			>
 				<p>
-					As long as those opportunities involve giving us money to re-purpose
-					old projects — we can come up with an endless number of those.
+					Crafting engaging content that converts followers into customers, with
+					strategic social media solutions to grow your business.
 				</p>
 			</SectionIntro>
 			<Container className="mt-16">
@@ -145,24 +144,25 @@ function Services() {
 						</FadeIn>
 					</div>
 					<List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-						<ListItem title="Web development">
-							We specialise in crafting beautiful, high quality marketing pages.
-							The rest of the website will be a shell that uses lorem ipsum
-							everywhere.
+						<ListItem title="Content Creation">
+							Crafting compelling visual narratives for Instagram Reels,
+							Stories, and Posts, designed to captivate your target audience and
+							drive meaningful engagement.
 						</ListItem>
-						<ListItem title="Application development">
-							We have a team of skilled developers who are experts in the latest
-							app frameworks, like Angular 1 and Google Web Toolkit.
+						<ListItem title="Graphic Design">
+							Developing impactful brand assets, from distinctive logos and
+							eye-catching banners to cohesive visual elements that solidify
+							your brand presence.
 						</ListItem>
-						<ListItem title="E-commerce">
-							We are at the forefront of modern e-commerce development. Which
-							mainly means adding your logo to the Shopify store template we’ve
-							used for the past six years.
+						<ListItem title="Branding">
+							Building a powerful and resonant brand identity through strategic
+							planning, messaging, and visual design, establishing a unique
+							market position and fostering lasting customer loyalty.
 						</ListItem>
-						<ListItem title="Custom content management">
-							At Charchaa we understand the importance of having a robust and
-							customised CMS. That’s why we run all of our client projects out
-							of a single, enormous Joomla instance.
+						<ListItem title="Website Development">
+							Creating responsive and user-friendly websites that seamlessly
+							integrate with your social media strategy, providing a central hub
+							for your online presence and driving conversions.
 						</ListItem>
 					</List>
 				</div>
@@ -183,33 +183,39 @@ export default async function Home() {
 		<>
 			<Container className="mt-24 sm:mt-32 md:mt-56">
 				<FadeIn className="max-w-3xl">
-					<h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-						Award-winning development charchaa based in Denmark.
+					{/* <h1 className="font-display text-5xl leading-none font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
+						Charchaa <br />
+						<span className="text-neutral-700 leading-none text-3xl text-nowrap">
+							— Your brand deserves it !
+						</span>
+					</h1> */}
+					<h1 className="font-display text-5xl leading-none font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
+						Your brand deserves it !
 					</h1>
 					<p className="mt-6 text-xl text-neutral-600">
-						We are a development charchaa working at the intersection of design
-						and technology. It’s a really busy intersection though — a lot of
-						our staff have been involved in hit and runs.
+						We are a Marketing Agency in India helping brands get customer reach
+						in shortest time periods.
 					</p>
 				</FadeIn>
 			</Container>
 
 			<Clients />
 
-			<CaseStudies caseStudies={caseStudies} />
+			{/* <CaseStudies caseStudies={caseStudies} /> */}
 
 			<Testimonial
 				className="mt-24 sm:mt-32 lg:mt-40"
 				client={{ name: "Phobia", logo: logoPhobiaDark }}
 			>
 				The team at Charchaa went above and beyond with our onboarding, even
-				finding a way to access the user’s microphone without triggering one of
-				those annoying permission dialogs.
+				finding a way to access the user&lsquo;s microphone without triggering
+				one of those annoying permission dialogs.
 			</Testimonial>
 
 			<Services />
+			<Pricing />
 
-			<ContactSection />
+			{/* <ContactSection /> */}
 		</>
 	);
 }

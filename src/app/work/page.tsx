@@ -1,4 +1,4 @@
-import { type Metadata } from 'next'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -112,13 +112,12 @@ function Clients() {
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          You’re in good company
+          You're in good company
         </h2>
       </FadeIn>
       <FadeInStagger className="mt-10" faster>
         <Border as={FadeIn} />
         <ul
-          role="list"
           className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4"
         >
           {clients.map(([client, logo]) => (
@@ -143,7 +142,7 @@ export const metadata: Metadata = {
 }
 
 export default async function Work() {
-  let caseStudies = await loadCaseStudies()
+  const caseStudies = await loadCaseStudies()
 
   return (
     <>
@@ -154,7 +153,7 @@ export default async function Work() {
         <p>
           We believe in efficiency and maximizing our resources to provide the
           best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          the same five projects we've been developing for the past decade.
         </p>
       </PageIntro>
 

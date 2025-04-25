@@ -7,7 +7,7 @@ import "@/styles/tailwind.css";
 export const metadata: Metadata = {
 	title: {
 		template: "%s - Charchaa",
-		default: "Charchaa - Award winning developer charchaa based in Denmark",
+		default: "Charchaa - Your brand deserves it !",
 	},
 };
 
