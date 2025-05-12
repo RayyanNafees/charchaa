@@ -1,7 +1,7 @@
 import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
 import { PageIntro } from "@/components/PageIntro";
-import { sendContactMail, sendNewslettertMail } from "../contact/action";
+import { sendContactMail, sendNewslettertMail } from "@/lib/email";
 
 export default async function ThankYou({
 	searchParams,

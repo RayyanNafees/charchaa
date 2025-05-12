@@ -18,7 +18,7 @@ import {
 	PhoneCall,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { sendNewslettertMail } from "@/app/contact/action";
+import { sendNewslettertMail } from "@/lib/email";
 
 const navigation = [
 	{
@@ -64,7 +64,7 @@ function Navigation() {
 						<li className="mt-4">
 							<Link
 								href="mailto:charchaa.in@gmail.com"
-								className="transition hover:text-neutral-950 flex items-center gap-x-2"
+								className="transition hover:text-neutral-950 flex-nowrap flex items-center gap-x-2"
 							>
 								✉️ charchaa.in@gmail.com
 							</Link>
@@ -120,7 +120,7 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 
 function NewsletterForm() {
 	return (
-		<form action="/thank-you" className="max-w-sm" method="post">
+		<form action="/send-newsletter" className="max-w-sm" method="post">
 			<label htmlFor="phone">
 				<h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
 					Let&lsquo;s Talk!

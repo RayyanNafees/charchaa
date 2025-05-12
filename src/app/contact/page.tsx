@@ -58,7 +58,7 @@ function RadioInput({
 function ContactForm() {
 	return (
 		<FadeIn className="lg:order-last">
-			<form action="/thank-you">
+			<form action="/send-contact">
 				<h2 className="font-display text-base font-semibold text-neutral-950">
 					Service Inquiries
 				</h2>
