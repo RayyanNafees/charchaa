@@ -10,6 +10,7 @@ import { Offices } from "@/components/Offices";
 import { PageIntro } from "@/components/PageIntro";
 import { SocialMedia } from "@/components/SocialMedia";
 import { Footer } from "@/components/Footer";
+import Image from "next/image";
 
 // import { LoaderCircle } from "lucide-react";
 
@@ -97,10 +98,12 @@ function ContactForm() {
 				<Button type="submit" className="mt-10 group" variant="black">
 					<span className="group-active:hidden inline">Contact</span>
 					<span className="group-active:flex hidden items-center justify-center gap-2">
-						<img
+						<Image
 							src="https://api.iconify.design/mdi:loading.svg?color=white"
 							alt="loading"
 							className="w-6 animate-spin"
+							width={24}
+							height={24}
 						/>
 						Sending...
 					</span>
