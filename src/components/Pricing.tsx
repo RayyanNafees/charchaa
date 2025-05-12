@@ -1,5 +1,8 @@
-import { Check, X as Cross } from "lucide-react";
+import { FadeIn } from "@/components/FadeIn";
 import { Button } from "./Button";
+import Image from "next/image";
+import { Container } from "./Container";
+import { SectionIntro } from "./SectionIntro";
 
 const pricingPlans = [
 	{
@@ -41,64 +44,73 @@ const pricingPlans = [
 
 function Pricing() {
 	return (
-		<div className="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-			<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-8">
-				{pricingPlans.map((plan) => (
-					<div
-						key={plan.name}
-						className="divide-y hover:shadow-md divide-gray-200 rounded-2xl border border-gray-200 shadow-xs"
-					>
-						<div className="p-6 sm:px-8">
-							<h2 className="text-lg font-medium text-gray-900">
-								{plan.name}
-								<span className="sr-only">Plan</span>
-							</h2>
+		<>
+			<SectionIntro
+				eyebrow="Pricing"
+				title="Tailored plans designed to prioritize your success."
+				className="mt-24 sm:mt-32 lg:mt-40"
+			>
+				<p>
+					Discover plans crafted to align with your unique goals, whether
+					you&lsquo;re just starting out, leveling up, or going all-in.
+				</p>
+			</SectionIntro>
+			<Container className="mt-16">
+				<FadeIn>
+					<div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+						<div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:gap-12">
+							{pricingPlans.map((plan, index) => (
+								<div
+									key={plan.name}
+									className="bg-white rounded-2xl shadow-md hover:shadow-lg transition duration-300 hover:scale-105  border-2 border-primary"
+								>
+									<div className="p-6 sm:p-8">
+										<h2 className="text-lg font-medium text-gray-900">
+											{plan.name}
+										</h2>
+										<p className="mt-2 text-gray-700">{plan.description}</p>
+										<p className="mt-2 sm:mt-4">
+											<strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
+												₹ {plan.price}
+											</strong>
+											<span className="text-sm font-medium text-gray-700">
+												/month
+											</span>
+										</p>
 
-							<p className="mt-2 text-gray-700">{plan.description}</p>
-
-							<p className="mt-2 sm:mt-4">
-								<strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
-									₹ {plan.price}
-								</strong>
-
-								<span className="text-sm font-medium text-gray-700">
-									/month
-								</span>
-							</p>
-
-							<Button
-								className="w-full mx-auto m-4  bg-primary hover:bg-primary/90 flex justify-center items-center text-white"
-								href="/contact"
-							>
-								<div>Get Started</div>
-							</Button>
-							{/* <a
-								className="mt-4 block rounded-sm border border-primary bg-primary px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-primary focus:ring-3 focus:outline-hidden sm:mt-6"
-								href="/"
-							>
-								Get Started
-							</a> */}
-						</div>
-
-						<div className="p-6 sm:px-8">
-							<p className="text-lg font-medium text-gray-900 sm:text-xl">
-								What&lsquo;s included:
-							</p>
-
-							<ul className="mt-2 space-y-2 sm:mt-4 list-disc ">
-								{plan.services.map((service) => (
-									<li key={service} className="flex items-center gap-1">
-										{/* <Check size={50} color={'green'} /> */}
-
-										<span className="text-gray-700">✅ {service} </span>
-									</li>
-								))}
-							</ul>
+										<Button
+											className="w-full mx-auto mt-6 bg-primary hover:bg-primary/90 flex justify-center items-center text-white transition duration-300"
+											href="/contact"
+										>
+											Get Started
+										</Button>
+									</div>
+									<div className="p-6 sm:p-8 border-t border-gray-200">
+										<p className="text-lg font-medium text-gray-900 sm:text-xl">
+											What&lsquo;s included:
+										</p>
+										<ul className="mt-2 space-y-2 sm:mt-4 list-disc">
+											{plan.services.map((service) => (
+												<li key={service} className="flex gap-1">
+													<Image
+														src="https://api.iconify.design/mdi/check.svg"
+														alt="✅"
+														className="w-6 h-6 mt-px "
+														width={20}
+														height={20}
+													/>
+													<span className="text-gray-700">{service}</span>
+												</li>
+											))}
+										</ul>
+									</div>
+								</div>
+							))}
 						</div>
 					</div>
-				))}
-			</div>
-		</div>
+				</FadeIn>
+			</Container>
+		</>
 	);
 }
 

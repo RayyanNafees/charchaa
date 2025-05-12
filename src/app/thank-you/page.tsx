@@ -5,6 +5,7 @@ import { sendContactMail, sendNewslettertMail } from "../contact/action";
 
 export default async function ThankYou({
 	searchParams,
+	...props
 }: {
 	searchParams: {
 		name: string;
@@ -19,7 +20,7 @@ export default async function ThankYou({
 	if (searchParams?.newsletter === "true")
 		await sendNewslettertMail(searchParams.phone);
 	else await sendContactMail(searchParams);
-
+	console.log({searchParams, props});
 	return (
 		<div className="bg-white">
 			<PageIntro eyebrow="Thank you" title="We'll be in touch soon">

@@ -120,7 +120,7 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 
 function NewsletterForm() {
 	return (
-		<form action="/thank-you" className="max-w-sm">
+		<form action="/thank-you" className="max-w-sm" method="post">
 			<label htmlFor="phone">
 				<h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
 					Let&lsquo;s Talk!
