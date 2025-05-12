@@ -235,7 +235,7 @@ export default async function Home() {
 				</div>
 				<Services />
 				<Pricing />
-				<ContactSection />
+				{/* <ContactSection /> */}
 				<Footer />
 			</div>
 		</div>
