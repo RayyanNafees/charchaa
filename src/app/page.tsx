@@ -27,6 +27,7 @@ import logoItmsh from "@/images/logos/itmsh.png";
 import logoTransform from "@/images/logos/transform-gym.png";
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from "@/lib/mdx";
 import Pricing from "@/components/Pricing";
+import { Footer } from "@/components/Footer";
 
 const clients = [
 	["TaoBao", logoTaoBao],
@@ -183,8 +184,8 @@ export default async function Home() {
 	const caseStudies = (await loadCaseStudies()).slice(0, 3);
 
 	return (
-		<>
-			<Container className="mt-24 sm:mt-32 md:mt-56">
+		<div className="bg-white">
+			<Container className="mt-24 sm:mt-32 md:mt-56 pb-32 bg-primary  ">
 				<FadeIn className="max-w-3xl">
 					{/* <h1 className="font-display text-5xl leading-none font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
 						Charchaa <br />
@@ -192,10 +193,10 @@ export default async function Home() {
 							— Your brand deserves it !
 						</span>
 					</h1> */}
-					<h1 className="font-display text-5xl leading-none font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
+					<h1 className="font-display text-5xl leading-none font-medium tracking-tight text-neutral-100 [text-wrap:balance] sm:text-7xl">
 						Your brand deserves it !
 					</h1>
-					<p className="mt-6 text-xl text-neutral-600">
+					<p className="mt-6 text-xl text-neutral-200 md:[text-wrap:pretty]">
 						We are a Marketing Agency in India helping brands get customer reach
 						in shortest time periods.
 					</p>
@@ -206,7 +207,7 @@ export default async function Home() {
 
 			{/* <CaseStudies caseStudies={caseStudies} /> */}
 
-			<Testimonial
+			{/* <Testimonial
 				className="mt-24 sm:mt-32 lg:mt-40"
 				client={{ name: "Phobia", logo: logoPhobiaDark }}
 			>
@@ -214,12 +215,29 @@ export default async function Home() {
 				dramatically improve our social media presence and reach way more
 				potential customers than we could on our own. Definitely recommend their
 				services
-			</Testimonial>
+			</Testimonial> */}
 
-			<Services />
-			<Pricing />
-
-			{/* <ContactSection /> */}
-		</>
+			<div className="bg-white">
+				<div className="w-full leading-0 overflow-x-hidden -z-10">
+					<svg
+						data-name="Layer 1"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 1200 120"
+						preserveAspectRatio="none"
+						className="block relative w-[calc(109% + 1.3px)]  h-15"
+					>
+						<title>Wave Divider</title>
+						<path
+							d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+							className="fill-primary"
+						/>
+					</svg>
+				</div>
+				<Services />
+				<Pricing />
+				<ContactSection />
+				<Footer />
+			</div>
+		</div>
 	);
 }

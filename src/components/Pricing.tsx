@@ -1,4 +1,5 @@
 import { Check, X as Cross } from "lucide-react";
+import { Button } from "./Button";
 
 const pricingPlans = [
 	{
@@ -65,12 +66,18 @@ function Pricing() {
 								</span>
 							</p>
 
-							<a
+							<Button
+								className="w-full mx-auto m-4  bg-primary hover:bg-primary/90 flex justify-center items-center text-white"
+								href="/contact"
+							>
+								<div>Get Started</div>
+							</Button>
+							{/* <a
 								className="mt-4 block rounded-sm border border-primary bg-primary px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-primary focus:ring-3 focus:outline-hidden sm:mt-6"
 								href="/"
 							>
 								Get Started
-							</a>
+							</a> */}
 						</div>
 
 						<div className="p-6 sm:px-8">
